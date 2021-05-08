@@ -1,78 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad2ace2a-fb2f-4782-b846-fbdf99e4da46" name="Default Changelist" comment="" />
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="ad2ace2a-fb2f-4782-b846-fbdf99e4da46" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/controller/DishesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/controller/DishesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/CanteenEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/model/CanteenEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/CategoryLevelOneEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/model/CategoryLevelOneEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/FlavorEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/model/FlavorEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/common/PageRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/model/common/PageRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/common/PageResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/model/common/PageResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/dishes/DishesDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/model/dishes/DishesDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/dishes/DishesItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/model/dishes/DishesItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/security/JwtInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/security/JwtInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/utils/MyConsts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/utils/MyConsts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/utils/PageUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/utils/PageUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/vo/InsertDishesDetailRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/vo/InsertDishesDetailResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/vo/QueryDishesItemRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/vo/QueryDishesItemRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/vo/QueryDishesItemResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/vo/QueryDishesItemResponse.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-751962604">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="3" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="49" column="37" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jimo/AuthServerApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jimo/model/dishes/DishesItem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="30" />
@@ -80,6 +37,7 @@
     <option name="width" value="1440" />
     <option name="height" value="800" />
   </component>
+  <component name="ProjectId" id="1sGMuWlpm73FjaYBjiWVpaBxsrS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
@@ -148,34 +106,41 @@
       <pane id="Scope" />
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1620492694300" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="Application.AuthServerApplication">
     <configuration name="AuthServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.jimo.AuthServerApplication" />
-      <module name="zebra-test" />
+      <module name="HackPKU21" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.jimo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -203,9 +168,17 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <configuration name="AuthServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="HackPKU21" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.jimo.AuthServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Maven.zebra" />
       <item itemvalue="Application.AuthServerApplication" />
+      <item itemvalue="Maven.zebra" />
+      <item itemvalue="Spring Boot.AuthServerApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -213,6 +186,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -223,6 +197,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620491833321</updated>
+      <workItem from="1620494697623" duration="82000" />
     </task>
     <servers />
   </component>
@@ -259,8 +234,8 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">

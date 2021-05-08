@@ -5,6 +5,7 @@ package com.jimo.model.dishes;
  * @author algorithm
  */
 public class DishesItem {
+
     /**
      * 商品名称
      */
@@ -39,11 +40,11 @@ public class DishesItem {
     Integer rateNumber;
 
     /**
-     * 图片链接 todo 接一个图床
+     * 图片链接 todo 展示的列表只有一张图，单四insert会有很多dishId-pictireId的记录；展示同一id的这张图随机选择？
      */
     String pictureUrl;
 
-    public DishesItem(String name, String price, String position, Integer calorie, Integer rate, Integer rateNumber, String pictureUrl) {
+    public DishesItem(String name, String price, String position, Integer calorie, Integer rate, Integer rateNumber, String pictureUrl, Integer waitTime) {
         this.name = name;
         this.price = price;
         this.position = position;
@@ -51,6 +52,7 @@ public class DishesItem {
         this.rate = rate;
         this.rateNumber = rateNumber;
         this.pictureUrl = pictureUrl;
+        this.waitTime = waitTime;
     }
 
     public String getPosition() {
@@ -107,5 +109,13 @@ public class DishesItem {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public Integer getWaitTime() {
+        return waitTime;
+    }
+
+    public void setWaitTime(Integer waitTime) {
+        this.waitTime = waitTime;
     }
 }

@@ -8,26 +8,27 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author jimo
- * @func 拦截token并验证，不通过则抛出异常 用于鉴权
+ * @func 拦截token并验证，不通过则抛出异常 用于鉴权 todo 有的不需要登陆，不要限制
  * @date 2018/8/24 22:38
  */
 public class JwtInterceptor extends HandlerInterceptorAdapter {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        System.out.println("prehandle");
-        final String authorization = request.getHeader("Authorization");
-        /*String authHeader = request.getHeader("Authorization");*/
-        if (authorization == null || !authorization.startsWith("Bearer ")) {
-            throw new ServletException("invalid Authorization header,请重新登陆");
-        }
-        //取得token
-        String token = authorization.substring(7);
-        try {
-            JwtUtil.checkToken(token);
-            return true;
-        } catch (Exception e) {
-            throw new ServletException(e.getMessage());
-        }
+//        System.out.println("prehandle");
+//        final String authorization = request.getHeader("Authorization");
+//        /*String authHeader = request.getHeader("Authorization");*/
+//        if (authorization == null || !authorization.startsWith("Bearer ")) {
+//            throw new ServletException("invalid Authorization header,请重新登陆");
+//        }
+//        //取得token
+//        String token = authorization.substring(7);
+//        try {
+//            JwtUtil.checkToken(token);
+//            return true;
+//        } catch (Exception e) {
+//            throw new ServletException(e.getMessage());
+//        }
+        return true;
     }
 }
