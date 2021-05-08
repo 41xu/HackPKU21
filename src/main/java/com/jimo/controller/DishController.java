@@ -1,5 +1,6 @@
 package com.jimo.controller;
 
+import com.jimo.model.common.Result;
 import com.jimo.vo.*;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,15 +13,15 @@ import org.springframework.web.bind.annotation.*;
 public class DishController {
 
     @PostMapping("/existing")
-    public PostExistingDishResponse postExistingDish(@RequestBody PostExistingDishRequest request){
+    public Result postExistingDish(@RequestBody PostExistingDishRequest request){
 
-        return new PostExistingDishResponse();
+        return new Result(201, "",new PostExistingDishResponse());
     }
 
     @PostMapping("/new")
-    public PostNewDishResponse postNewDish(@RequestBody PostNewDishRequest request){
+    public Result postNewDish(@RequestBody PostNewDishRequest request){
 
-        return new PostNewDishResponse();
+        return new Result(201, "", new PostNewDishResponse());
     }
 
 

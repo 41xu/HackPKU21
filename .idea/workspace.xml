@@ -5,23 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad2ace2a-fb2f-4782-b846-fbdf99e4da46" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/controller/DishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/controller/DishController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/controller/DishesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/controller/DishesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/CanteenEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/model/CanteenEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/CategoryLevelOneEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/model/CategoryLevelOneEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/FlavorEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/model/FlavorEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/common/PageRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/model/common/PageRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/common/PageResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/model/common/PageResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/dishes/DishesDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/model/dishes/DishesDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/dishes/DishesItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/model/dishes/DishesItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/security/JwtInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/security/JwtInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/utils/MyConsts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/utils/MyConsts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/utils/PageUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/utils/PageUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/vo/InsertDishesDetailRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/vo/InsertDishesDetailResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/vo/QueryDishesItemRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/vo/QueryDishesItemRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/vo/QueryDishesItemResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/vo/QueryDishesItemResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/exp/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/exp/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/common/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/model/common/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/vo/PostExistingDishResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/vo/PostExistingDishResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/vo/PostNewDishResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/vo/PostNewDishResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jimo/controller/DishController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jimo/controller/DishController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jimo/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jimo/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jimo/exp/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jimo/exp/GlobalExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jimo/model/common/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jimo/model/common/Result.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jimo/vo/PostExistingDishResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jimo/vo/PostExistingDishResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/jimo/vo/PostNewDishResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jimo/vo/PostNewDishResponse.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +110,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1620492694300" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -197,7 +194,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620491833321</updated>
-      <workItem from="1620494697623" duration="82000" />
+      <workItem from="1620494697623" duration="942000" />
     </task>
     <servers />
   </component>
@@ -236,6 +233,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">

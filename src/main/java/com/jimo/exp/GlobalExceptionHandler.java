@@ -14,6 +14,6 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public Result handleException(Exception e) {
-        return new Result(false, e.getMessage());
+        return new Result(500, e.getMessage());
     }
 }

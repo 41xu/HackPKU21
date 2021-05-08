@@ -7,9 +7,9 @@ package com.jimo.model.common;
  */
 public class Result {
     /**
-     * 成功为true
+     * 状态码
      */
-    private boolean ok;
+    private Integer code;
     /**
      * 错误消息或其他提示
      */
@@ -17,32 +17,31 @@ public class Result {
     /**
      * 数据
      */
-    private Object data;
+    private Object results;
 
-    public Result() {
-        this(true, "", null);
-    }
-
-    public Result(Object data) {
-        this(true, "", data);
-    }
-
-    public Result(boolean ok, String msg) {
-        this(ok, msg, null);
-    }
-
-    public Result(boolean ok, String msg, Object data) {
-        this.ok = ok;
+    public Result(Integer code, String msg, Object results) {
+        this.code = code;
         this.msg = msg;
-        this.data = data;
+        this.results = results;
     }
 
-    public boolean isOk() {
-        return ok;
+    public Result(Integer code, String msg) {
+        this.code = code;
+        this.msg = msg;
+    }
+    public Result(String login){
+
+    }
+    public Result(boolean bool){
+
     }
 
-    public void setOk(boolean ok) {
-        this.ok = ok;
+    public Integer getCode() {
+        return code;
+    }
+
+    public void setCode(Integer code) {
+        this.code = code;
     }
 
     public String getMsg() {
@@ -53,11 +52,11 @@ public class Result {
         this.msg = msg;
     }
 
-    public Object getData() {
-        return data;
+    public Object getResults() {
+        return results;
     }
 
-    public void setData(Object data) {
-        this.data = data;
+    public void setResults(Object results) {
+        this.results = results;
     }
 }
