@@ -73,6 +73,7 @@ public class DishController {
 
     @PostMapping("/new")
     public Result postNewDishReview(@RequestBody PostNewDishRequest request){
+
         // 新增菜品
         String dishUuid = UUID.randomUUID().toString();
         String reviewUuid = UUID.randomUUID().toString();
