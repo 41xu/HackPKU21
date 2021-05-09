@@ -5,9 +5,11 @@ import com.jimo.mapper.DishMapper;
 import com.jimo.mapper.ReviewMapper;
 import com.jimo.model.DishExample;
 import com.jimo.model.common.Result;
+import com.jimo.utils.MyConsts;
 import com.jimo.vo.dishes.DishesItem;
 import com.jimo.vo.*;
 import io.jsonwebtoken.lang.Collections;
+import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -66,8 +68,9 @@ public class DishesController {
         if(!Strings.isNullOrEmpty(canteen)){
             criteria.andCanteenEqualTo(canteen);
         }
-
-        return new Result(200, "", dishMapper.selectByExample(example));
+        int offset = (page==null)?0:(page-MyConsts.DEFAULT_PAGE_BEGIN) * MyConsts.DEFAULT_PAGE_SIZE;
+        RowBounds rowBounds = new RowBounds(offset, MyConsts.DEFAULT_PAGE_SIZE);
+        return new Result(200, "", dishMapper.selectByExampleWithRowbounds(example, rowBounds));
 //        List<DishesItem> returnList = new ArrayList<>();
 //        returnList.add(new DishesItem("菜品名称", "13.2", "北京大学 学一食堂", 71, 1, 233, "123", 10));
 //        returnList.add(new DishesItem("番茄炒蛋", "99.9", "北京大学 学二食堂", 71, 5, 233, "1213", 10));

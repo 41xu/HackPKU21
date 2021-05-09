@@ -7,8 +7,10 @@
     <list default="true" id="ce531974-d962-4a2b-ab51-f87dd0273c7d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/controller/DishesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/controller/DishesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/DishMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ReviewMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/mapper/DishMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/mapper/DishMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/mapper/ReviewMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/mapper/ReviewMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/jimo/mapper/DishMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/jimo/mapper/DishMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/jimo/mapper/ReviewMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/jimo/mapper/ReviewMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620526946492</updated>
-      <workItem from="1620526947976" duration="14119000" />
+      <workItem from="1620526947976" duration="15184000" />
     </task>
     <servers />
   </component>
