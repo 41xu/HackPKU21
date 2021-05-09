@@ -7,13 +7,17 @@ public class PostNewDishResponse {
     /**
      * 新增菜品id
      */
-    Integer dishId;
+    String dishId;
 
-    public Integer getDishId() {
+    public PostNewDishResponse(String dishId) {
+        this.dishId = dishId;
+    }
+
+    public String getDishId() {
         return dishId;
     }
 
-    public void setDishId(Integer dishId) {
+    public void setDishId(String dishId) {
         this.dishId = dishId;
     }
 }

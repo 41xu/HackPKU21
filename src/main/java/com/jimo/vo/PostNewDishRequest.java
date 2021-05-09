@@ -24,7 +24,7 @@ public class PostNewDishRequest {
      * 口味
      * @see FlavorEnum
      */
-    List<String> flavor;
+    String flavor;
     /**
      * 等待时间
      */
@@ -56,13 +56,14 @@ public class PostNewDishRequest {
      */
     String userId;
 
-    public PostNewDishRequest(String description, List<String> pictureUrls, Integer rate, List<String> flavor, Integer waitTime, Integer price, String category, String canteen, String userId) {
+    public PostNewDishRequest(String description, List<String> pictureUrls, Integer rate, String flavor, Integer waitTime, Integer price, String name, String category, String canteen, String userId) {
         this.description = description;
         this.pictureUrls = pictureUrls;
         this.rate = rate;
         this.flavor = flavor;
         this.waitTime = waitTime;
         this.price = price;
+        this.name = name;
         this.category = category;
         this.canteen = canteen;
         this.userId = userId;
@@ -92,11 +93,11 @@ public class PostNewDishRequest {
         this.rate = rate;
     }
 
-    public List<String> getFlavor() {
+    public String getFlavor() {
         return flavor;
     }
 
-    public void setFlavor(List<String> flavor) {
+    public void setFlavor(String flavor) {
         this.flavor = flavor;
     }
 
@@ -114,6 +115,14 @@ public class PostNewDishRequest {
 
     public void setPrice(Integer price) {
         this.price = price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getCategory() {

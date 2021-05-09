@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jimo.mapper.ReviewMapper">
   <resultMap id="BaseResultMap" type="com.jimo.model.Review">
-    <result column="dish_id" jdbcType="INTEGER" property="dishId" />
+    <result column="dish_id" jdbcType="VARCHAR" property="dishId" />
     <result column="review_id" jdbcType="VARCHAR" property="reviewId" />
     <result column="user_id" jdbcType="VARCHAR" property="userId" />
     <result column="description" jdbcType="VARCHAR" property="description" />
@@ -62,7 +62,7 @@
     insert into review (dish_id, review_id, user_id, 
       description, rate, flavor, 
       wait_time, price)
-    values (#{dishId,jdbcType=INTEGER}, #{reviewId,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR}, 
+    values (#{dishId,jdbcType=VARCHAR}, #{reviewId,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR}, 
       #{description,jdbcType=VARCHAR}, #{rate,jdbcType=INTEGER}, #{flavor,jdbcType=VARCHAR}, 
       #{waitTime,jdbcType=INTEGER}, #{price,jdbcType=INTEGER})
   </insert>
@@ -96,7 +96,7 @@
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="dishId != null">
-        #{dishId,jdbcType=INTEGER},
+        #{dishId,jdbcType=VARCHAR},
       </if>
       <if test="reviewId != null">
         #{reviewId,jdbcType=VARCHAR},

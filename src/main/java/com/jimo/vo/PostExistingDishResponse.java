@@ -7,13 +7,17 @@ public class PostExistingDishResponse {
     /**
      * 已经存在的菜品id
      */
-    Integer dishId;
+    String dishId;
 
-    public Integer getDishId() {
+    public PostExistingDishResponse(String dishId) {
+        this.dishId = dishId;
+    }
+
+    public String getDishId() {
         return dishId;
     }
 
-    public void setDishId(Integer dishId) {
+    public void setDishId(String dishId) {
         this.dishId = dishId;
     }
 }

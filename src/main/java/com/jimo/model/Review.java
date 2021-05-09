@@ -1,7 +1,7 @@
 package com.jimo.model;
 
 public class Review {
-    private Integer dishId;
+    private String dishId;
 
     private String reviewId;
 
@@ -17,12 +17,12 @@ public class Review {
 
     private Integer price;
 
-    public Integer getDishId() {
+    public String getDishId() {
         return dishId;
     }
 
-    public void setDishId(Integer dishId) {
-        this.dishId = dishId;
+    public void setDishId(String dishId) {
+        this.dishId = dishId == null ? null : dishId.trim();
     }
 
     public String getReviewId() {

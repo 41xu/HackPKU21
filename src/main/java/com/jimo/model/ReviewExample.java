@@ -114,52 +114,62 @@ public class ReviewExample {
             return (Criteria) this;
         }
 
-        public Criteria andDishIdEqualTo(Integer value) {
+        public Criteria andDishIdEqualTo(String value) {
             addCriterion("dish_id =", value, "dishId");
             return (Criteria) this;
         }
 
-        public Criteria andDishIdNotEqualTo(Integer value) {
+        public Criteria andDishIdNotEqualTo(String value) {
             addCriterion("dish_id <>", value, "dishId");
             return (Criteria) this;
         }
 
-        public Criteria andDishIdGreaterThan(Integer value) {
+        public Criteria andDishIdGreaterThan(String value) {
             addCriterion("dish_id >", value, "dishId");
             return (Criteria) this;
         }
 
-        public Criteria andDishIdGreaterThanOrEqualTo(Integer value) {
+        public Criteria andDishIdGreaterThanOrEqualTo(String value) {
             addCriterion("dish_id >=", value, "dishId");
             return (Criteria) this;
         }
 
-        public Criteria andDishIdLessThan(Integer value) {
+        public Criteria andDishIdLessThan(String value) {
             addCriterion("dish_id <", value, "dishId");
             return (Criteria) this;
         }
 
-        public Criteria andDishIdLessThanOrEqualTo(Integer value) {
+        public Criteria andDishIdLessThanOrEqualTo(String value) {
             addCriterion("dish_id <=", value, "dishId");
             return (Criteria) this;
         }
 
-        public Criteria andDishIdIn(List<Integer> values) {
+        public Criteria andDishIdLike(String value) {
+            addCriterion("dish_id like", value, "dishId");
+            return (Criteria) this;
+        }
+
+        public Criteria andDishIdNotLike(String value) {
+            addCriterion("dish_id not like", value, "dishId");
+            return (Criteria) this;
+        }
+
+        public Criteria andDishIdIn(List<String> values) {
             addCriterion("dish_id in", values, "dishId");
             return (Criteria) this;
         }
 
-        public Criteria andDishIdNotIn(List<Integer> values) {
+        public Criteria andDishIdNotIn(List<String> values) {
             addCriterion("dish_id not in", values, "dishId");
             return (Criteria) this;
         }
 
-        public Criteria andDishIdBetween(Integer value1, Integer value2) {
+        public Criteria andDishIdBetween(String value1, String value2) {
             addCriterion("dish_id between", value1, value2, "dishId");
             return (Criteria) this;
         }
 
-        public Criteria andDishIdNotBetween(Integer value1, Integer value2) {
+        public Criteria andDishIdNotBetween(String value1, String value2) {
             addCriterion("dish_id not between", value1, value2, "dishId");
             return (Criteria) this;
         }

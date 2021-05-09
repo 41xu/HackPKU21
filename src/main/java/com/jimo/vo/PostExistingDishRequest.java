@@ -1,6 +1,7 @@
 package com.jimo.vo;
 
 import com.jimo.model.enums.FlavorEnum;
+import jakarta.validation.constraints.NotNull;
 
 import java.util.List;
 
@@ -11,7 +12,8 @@ public class PostExistingDishRequest {
     /**
      * 菜品的distinct id
      */
-    Integer dishId;
+    @NotNull
+    String dishId;
     /**
      * 描述
      */
@@ -41,7 +43,7 @@ public class PostExistingDishRequest {
      */
     String userId;
 
-    public PostExistingDishRequest(Integer dishId, String description, List<String> pictureUrls, Integer rate, String flavor, Integer waitTime, Integer price, String userId) {
+    public PostExistingDishRequest(String dishId, String description, List<String> pictureUrls, Integer rate, String flavor, Integer waitTime, Integer price, String userId) {
         this.dishId = dishId;
         this.description = description;
         this.pictureUrls = pictureUrls;
@@ -52,11 +54,11 @@ public class PostExistingDishRequest {
         this.userId = userId;
     }
 
-    public Integer getDishId() {
+    public String getDishId() {
         return dishId;
     }
 
-    public void setDishId(Integer dishId) {
+    public void setDishId(String dishId) {
         this.dishId = dishId;
     }
 
