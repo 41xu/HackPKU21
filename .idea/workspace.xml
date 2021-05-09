@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad2ace2a-fb2f-4782-b846-fbdf99e4da46" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/controller/DishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/controller/DishController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/controller/DishesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/controller/DishesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/exp/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/exp/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/common/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/model/common/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/vo/PostExistingDishResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/vo/PostExistingDishResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/vo/PostNewDishResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/vo/PostNewDishResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jimo/controller/DishController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jimo/controller/DishController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jimo/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jimo/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jimo/exp/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jimo/exp/GlobalExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jimo/model/common/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jimo/model/common/Result.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jimo/vo/PostExistingDishResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jimo/vo/PostExistingDishResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/jimo/vo/PostNewDishResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/jimo/vo/PostNewDishResponse.class" afterDir="false" />
-    </list>
+    <list default="true" id="ad2ace2a-fb2f-4782-b846-fbdf99e4da46" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,6 +92,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1620492694300" />
