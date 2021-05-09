@@ -1,4 +1,6 @@
 package com.jimo.controller;
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -46,6 +48,8 @@ public class DishController {
         review.setFlavor(request.getFlavor());
         review.setWaitTime(request.getWaitTime());
         review.setPrice(request.getPrice());
+        // todo 插入时间
+        review.setCreateDate(new Timestamp(System.currentTimeMillis()));
         // review Id from
         int res = reviewMapper.insert(review);
         System.out.println("review mapper insert result: " + res);
@@ -79,7 +83,8 @@ public class DishController {
         review.setFlavor(request.getFlavor());
         review.setWaitTime(request.getWaitTime());
         review.setPrice(request.getPrice());
-
+        // todo 插入时间
+        review.setCreateDate(new Timestamp(System.currentTimeMillis()));
         return new Result(201, "", new PostNewDishResponse(dishUuid));
     }
 

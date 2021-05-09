@@ -1,5 +1,7 @@
 package com.jimo.model;
 
+import java.util.Date;
+
 public class Review {
     private String dishId;
 
@@ -16,6 +18,8 @@ public class Review {
     private Integer waitTime;
 
     private Integer price;
+
+    private Date createDate;
 
     public String getDishId() {
         return dishId;
@@ -79,5 +83,13 @@ public class Review {
 
     public void setPrice(Integer price) {
         this.price = price;
+    }
+
+    public Date getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
     }
 }

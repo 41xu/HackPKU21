@@ -10,6 +10,7 @@
     <result column="flavor" jdbcType="VARCHAR" property="flavor" />
     <result column="wait_time" jdbcType="INTEGER" property="waitTime" />
     <result column="price" jdbcType="INTEGER" property="price" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -41,7 +42,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    dish_id, review_id, user_id, description, rate, flavor, wait_time, price
+    dish_id, review_id, user_id, description, rate, flavor, wait_time, price, create_date
   </sql>
   <select id="selectByExample" parameterType="com.jimo.model.ReviewExample" resultMap="BaseResultMap">
     select
@@ -61,10 +62,12 @@
   <insert id="insert" parameterType="com.jimo.model.Review">
     insert into review (dish_id, review_id, user_id, 
       description, rate, flavor, 
-      wait_time, price)
+      wait_time, price, create_date
+      )
     values (#{dishId,jdbcType=VARCHAR}, #{reviewId,jdbcType=VARCHAR}, #{userId,jdbcType=VARCHAR}, 
       #{description,jdbcType=VARCHAR}, #{rate,jdbcType=INTEGER}, #{flavor,jdbcType=VARCHAR}, 
-      #{waitTime,jdbcType=INTEGER}, #{price,jdbcType=INTEGER})
+      #{waitTime,jdbcType=INTEGER}, #{price,jdbcType=INTEGER}, #{createDate,jdbcType=TIMESTAMP}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.jimo.model.Review">
     insert into review
@@ -93,6 +96,9 @@
       <if test="price != null">
         price,
       </if>
+      <if test="createDate != null">
+        create_date,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="dishId != null">
@@ -118,6 +124,9 @@
       </if>
       <if test="price != null">
         #{price,jdbcType=INTEGER},
+      </if>
+      <if test="createDate != null">
+        #{createDate,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>

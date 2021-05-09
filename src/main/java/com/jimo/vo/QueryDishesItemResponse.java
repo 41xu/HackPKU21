@@ -1,6 +1,6 @@
 package com.jimo.vo;
 
-import com.jimo.vo.dishes.DishesItem;
+import com.jimo.vo.entity.DishesItem;
 
 import java.util.List;
 
