@@ -35,8 +35,10 @@ public class DishController {
         if(Collections.isEmpty(list)){
             return new Result(500, "错误的dishId");
         }
-        // 新增到Review
+        // 新增到Review 是一个新的review需要分配uuid
         Review review = new Review();
+        String reviewUuid = UUID.randomUUID().toString();
+        review.setReviewId(reviewUuid);
         review.setDishId(request.getDishId());
         review.setUserId(request.getUserId());
         review.setDescription(request.getDescription());
