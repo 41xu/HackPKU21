@@ -5,26 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce531974-d962-4a2b-ab51-f87dd0273c7d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/AuthServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/AuthServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/controller/DishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/controller/DishController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/controller/DishesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/controller/DishesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/CanteenEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/model/enums/CanteenEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/CategoryLevelOneEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/model/enums/CategoryLevelOneEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/FlavorEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/model/enums/FlavorEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/common/PageRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/common/PageResult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/security/JwtInterceptor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/security/JwtUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/security/WebConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/utils/PageUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/vo/PostExistingDishRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/vo/PostExistingDishRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/vo/PostNewDishRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/vo/PostNewDishRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/vo/QueryDishesItemRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/vo/QueryDishesItemRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/DishMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ReviewMapper.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +82,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620526946492</updated>
-      <workItem from="1620526947976" duration="12842000" />
+      <workItem from="1620526947976" duration="14119000" />
     </task>
     <servers />
   </component>

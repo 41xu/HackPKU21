@@ -38,11 +38,12 @@ public class DishesController {
                                 @RequestParam(value = "minCalorie", required = false) Integer minCalorie,
                                 @RequestParam(value = "page", required = false) Integer page,
                                 @RequestParam(value = "canteen", required = false) String canteen) {
-        // System.out.println(name);
+
         DishExample example = new DishExample();
         DishExample.Criteria criteria = example.createCriteria();
         if(!Strings.isNullOrEmpty(name)){
-            criteria.andDishNameLike(name);
+            System.out.println(name);
+            criteria.andDishNameLike("%"+name+"%");
         }
         if(!Strings.isNullOrEmpty(category)){
             criteria.andCategoryEqualTo(category);
@@ -66,13 +67,13 @@ public class DishesController {
             criteria.andCanteenEqualTo(canteen);
         }
 
-        dishMapper.selectByExample(example);
-        List<DishesItem> returnList = new ArrayList<>();
-        returnList.add(new DishesItem("菜品名称", "13.2", "北京大学 学一食堂", 71, 1, 233, "123", 10));
-        returnList.add(new DishesItem("番茄炒蛋", "99.9", "北京大学 学二食堂", 71, 5, 233, "1213", 10));
-        QueryDishesItemResponse response = new QueryDishesItemResponse();
-        response.setDishesItemList(returnList);
-        return new Result(200, "", response);
+        return new Result(200, "", dishMapper.selectByExample(example));
+//        List<DishesItem> returnList = new ArrayList<>();
+//        returnList.add(new DishesItem("菜品名称", "13.2", "北京大学 学一食堂", 71, 1, 233, "123", 10));
+//        returnList.add(new DishesItem("番茄炒蛋", "99.9", "北京大学 学二食堂", 71, 5, 233, "1213", 10));
+//        QueryDishesItemResponse response = new QueryDishesItemResponse();
+//        response.setDishesItemList(returnList);
+//        return new Result(200, "", response);
     }
 
 }
