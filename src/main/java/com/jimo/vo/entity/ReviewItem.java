@@ -1,5 +1,7 @@
 package com.jimo.vo.entity;
 
+import java.util.List;
+
 /**
  * 商品详情 View Object
  * @author algorithm
@@ -29,6 +31,11 @@ public class ReviewItem {
      * @see com.jimo.model.enums.CategoryLevelOneEnum
      */
     String category;
+
+    /**
+     * 图片链接
+     */
+    List<String> pictureUrls;
 
     public String getId() {
         return Id;
@@ -92,5 +99,13 @@ public class ReviewItem {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public List<String> getPictureUrls() {
+        return pictureUrls;
+    }
+
+    public void setPictureUrls(List<String> pictureUrls) {
+        this.pictureUrls = pictureUrls;
     }
 }

@@ -2,11 +2,9 @@ package com.jimo.controller;
 
 
 import com.jimo.mapper.DishMapper;
+import com.jimo.mapper.DishPictureMapper;
 import com.jimo.mapper.ReviewMapper;
-import com.jimo.model.Dish;
-import com.jimo.model.DishExample;
-import com.jimo.model.Review;
-import com.jimo.model.ReviewExample;
+import com.jimo.model.*;
 import com.jimo.model.common.Result;
 import com.jimo.utils.MyConsts;
 import com.jimo.utils.TimeUtils;
@@ -35,15 +33,18 @@ public class ReviewController {
 
     @Autowired
     private DishMapper dishMapper;
+    @Autowired
+    private DishPictureMapper dishPictureMapper;
+
 
     @GetMapping("/getList")
     public Result getReviewList(@RequestParam(value = "dishId", required = false) String dishId,
-                                @RequestParam(value = "page", required = false) Integer page){
+                                @RequestParam(value = "page", required = false) Integer page) {
         // 查询是否存在这个dishId
         DishExample dishExample = new DishExample();
         dishExample.createCriteria().andDishIdEqualTo(dishId);
         List<Dish> dishRes = dishMapper.selectByExample(dishExample);
-        if(Collections.isEmpty(dishRes)){
+        if (Collections.isEmpty(dishRes)) {
             return new Result(500, "invalid dishId: " + dishId);
         }
         // 查询所有Review
@@ -53,7 +54,13 @@ public class ReviewController {
         RowBounds rowBounds = new RowBounds(offset, MyConsts.DEFAULT_PAGE_SIZE);
         List<ReviewItem> retList = new ArrayList<>();
         List<Review> reviewList = reviewMapper.selectByExampleWithRowbounds(example, rowBounds);
-        for(Review review : reviewList){
+
+        // 每个dish 查询所有pictureUrl
+        DishPictureExample dishPictureExample = new DishPictureExample();
+        dishPictureExample.createCriteria().andDishIdEqualTo(dishId);
+        List<DishPicture> dpList = dishPictureMapper.selectByExample(dishPictureExample);
+
+        for (Review review : reviewList) {
             ReviewItem reviewItem = new ReviewItem();
             reviewItem.setId(review.getReviewId());
 
@@ -66,6 +73,14 @@ public class ReviewController {
             reviewItem.setWaitTime(review.getWaitTime());
             reviewItem.setPrice(review.getPrice());
             reviewItem.setCategory(dishRes.get(0).getCategory());
+            // todo 添加照片
+            List<String> pictureUrlList = new ArrayList<>();
+            for(DishPicture dp:dpList){
+                if(dp.getReviewId().equals(review.getReviewId())){
+                    pictureUrlList.add(dp.getPictureUrl());
+                }
+            }
+            reviewItem.setPictureUrls(pictureUrlList);
             retList.add(reviewItem);
         }
 

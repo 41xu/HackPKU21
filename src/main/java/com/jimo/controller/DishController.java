@@ -5,9 +5,11 @@ import java.util.List;
 import java.util.UUID;
 
 import com.jimo.mapper.DishMapper;
+import com.jimo.mapper.DishPictureMapper;
 import com.jimo.mapper.ReviewMapper;
 import com.jimo.model.Dish;
 import com.jimo.model.DishExample;
+import com.jimo.model.DishPicture;
 import com.jimo.model.Review;
 import com.jimo.model.common.Result;
 import com.jimo.vo.*;
@@ -27,6 +29,9 @@ public class DishController {
 
     @Autowired
     private DishMapper dishMapper;
+
+    @Autowired
+    private DishPictureMapper dishPictureMapper;
 
     @PostMapping("/existing")
     public Result postExistingDishReview(@RequestBody PostExistingDishRequest request){
@@ -53,6 +58,16 @@ public class DishController {
         // review Id from
         int res = reviewMapper.insert(review);
         System.out.println("review mapper insert result: " + res);
+
+        // todo 插入picture
+        List<String> pictureUrlList = request.getPictureUrls();
+        for(String url: pictureUrlList){
+            DishPicture dishPicture = new DishPicture();
+            dishPicture.setDishId(request.getDishId());
+            dishPicture.setPictureUrl(url);
+            dishPicture.setReviewId(reviewUuid);
+            dishPictureMapper.insert(dishPicture);
+        }
         return new Result(201, "",new PostExistingDishResponse(request.getDishId()));
     }
 
@@ -85,6 +100,16 @@ public class DishController {
         review.setPrice(request.getPrice());
         // todo 插入时间
         review.setCreateDate(new Timestamp(System.currentTimeMillis()));
+
+        // todo 插入picture
+        List<String> pictureUrlList = request.getPictureUrls();
+        for(String url: pictureUrlList){
+            DishPicture dishPicture = new DishPicture();
+            dishPicture.setDishId(dishUuid);
+            dishPicture.setPictureUrl(url);
+            dishPicture.setReviewId(reviewUuid);
+            dishPictureMapper.insert(dishPicture);
+        }
         return new Result(201, "", new PostNewDishResponse(dishUuid));
     }
 
