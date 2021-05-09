@@ -1,6 +1,8 @@
 package com.jimo.vo;
 
-import com.jimo.model.CategoryLevelOneEnum;
+import com.jimo.model.enums.CategoryLevelOneEnum;
+import com.jimo.model.enums.CanteenEnum;
+import com.jimo.model.enums.FlavorEnum;
 
 import java.util.List;
 
@@ -19,7 +21,7 @@ public class QueryDishesItemRequest {
     String category;
     /**
      * 食堂位置 todo 是不是唯一标识？
-     * @see com.jimo.model.CanteenEnum
+     * @see CanteenEnum
      */
     String canteen;
     /**
@@ -29,7 +31,7 @@ public class QueryDishesItemRequest {
 
     /**
      * 口味 todo 学生来定
-     * @see com.jimo.model.FlavorEnum
+     * @see FlavorEnum
      */
     List<String> flavors;
     /**
@@ -41,6 +43,10 @@ public class QueryDishesItemRequest {
      */
     Integer maxCalorie;
     /**
+     * 最小卡路里数 todo 可添加身体数据，辅助计算
+     */
+    Integer minCalorie;
+    /**
      * 分钟
      */
     Integer waitTime;
@@ -49,6 +55,14 @@ public class QueryDishesItemRequest {
      * 从1开始，default 1 pageSize = 10
      */
     Integer page = 1;
+
+    public Integer getMinCalorie() {
+        return minCalorie;
+    }
+
+    public void setMinCalorie(Integer minCalorie) {
+        this.minCalorie = minCalorie;
+    }
 
     public String getName() {
         return name;
@@ -122,7 +136,7 @@ public class QueryDishesItemRequest {
         this.waitTime = waitTime;
     }
 
-    public QueryDishesItemRequest(String name, String category, String canteen, Integer price, List<String> flavors, List<String> ingredients, Integer maxCalorie, Integer waitTime, Integer page) {
+    public QueryDishesItemRequest(String name, String category, String canteen, Integer price, List<String> flavors, List<String> ingredients, Integer maxCalorie, Integer minCalorie, Integer waitTime, Integer page) {
         this.name = name;
         this.category = category;
         this.canteen = canteen;
@@ -130,6 +144,7 @@ public class QueryDishesItemRequest {
         this.flavors = flavors;
         this.ingredients = ingredients;
         this.maxCalorie = maxCalorie;
+        this.minCalorie = minCalorie;
         this.waitTime = waitTime;
         this.page = page;
     }

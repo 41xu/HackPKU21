@@ -7,33 +7,68 @@
     <list default="true" id="ce531974-d962-4a2b-ab51-f87dd0273c7d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/AuthServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/AuthServerApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/controller/DishController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/controller/DishController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/controller/DishesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/controller/DishesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/dishes/DishesDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/vo/dishes/DishesDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/dishes/DishesItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/vo/dishes/DishesItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/CanteenEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/model/enums/CanteenEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/CategoryLevelOneEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/model/enums/CategoryLevelOneEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/FlavorEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/model/enums/FlavorEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/common/PageRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/model/common/PageResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/security/JwtInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/security/JwtUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/security/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/utils/PageUtils.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/vo/PostExistingDishRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/vo/PostExistingDishRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/vo/PostNewDishRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/vo/PostNewDishRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/vo/QueryDishesItemRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/vo/QueryDishesItemRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jimo/vo/QueryDishesItemResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jimo/vo/QueryDishesItemResponse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1sHQHKDGLMvwMqCsqMGMftPG6UB" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\coding\ppp\HackPKU21\mybatis_gen" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
@@ -63,7 +98,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620526946492</updated>
-      <workItem from="1620526947976" duration="2102000" />
+      <workItem from="1620526947976" duration="12842000" />
     </task>
     <servers />
   </component>

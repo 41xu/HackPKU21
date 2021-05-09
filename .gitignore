@@ -2,3 +2,5 @@
 target
 *.iml
 mybatis_gen
+*.jar
+mybatis-generator-confid.xml

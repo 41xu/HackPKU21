@@ -1,4 +1,4 @@
-package com.jimo.model;
+package com.jimo.model.enums;
 
 /**
  * @author algorithm

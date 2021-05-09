@@ -1,4 +1,4 @@
-package com.jimo.model;
+package com.jimo.model.enums;
 
 public enum FlavorEnum {
     Spicy("Spicy", 0), Sour("Sour", 1), Sweet("Sweet", 2), Bitter("Bitter", 3);

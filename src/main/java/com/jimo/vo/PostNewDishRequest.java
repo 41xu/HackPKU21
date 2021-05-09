@@ -1,5 +1,9 @@
 package com.jimo.vo;
 
+import com.jimo.model.enums.CanteenEnum;
+import com.jimo.model.enums.CategoryLevelOneEnum;
+import com.jimo.model.enums.FlavorEnum;
+
 import java.util.List;
 
 /**
@@ -18,7 +22,7 @@ public class PostNewDishRequest {
     Integer rate;
     /**
      * 口味
-     * @see com.jimo.model.FlavorEnum
+     * @see FlavorEnum
      */
     List<String> flavor;
     /**
@@ -31,14 +35,19 @@ public class PostNewDishRequest {
     Integer price;
 
     /**
+     * 可选添加名字
+     */
+    String name;
+
+    /**
      * 一级类目
-     * @see com.jimo.model.CategoryLevelOneEnum
+     * @see CategoryLevelOneEnum
      */
     String category;
 
     /**
      * 食堂
-     * @see com.jimo.model.CanteenEnum
+     * @see CanteenEnum
      */
     String canteen;
 

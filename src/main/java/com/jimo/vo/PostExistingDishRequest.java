@@ -1,5 +1,7 @@
 package com.jimo.vo;
 
+import com.jimo.model.enums.FlavorEnum;
+
 import java.util.List;
 
 /**
@@ -22,9 +24,9 @@ public class PostExistingDishRequest {
     Integer rate;
     /**
      * 口味
-     * @see com.jimo.model.FlavorEnum
+     * @see FlavorEnum
      */
-    List<String> flavor;
+    String flavor;
     /**
      * 等待时间
      */
@@ -39,7 +41,7 @@ public class PostExistingDishRequest {
      */
     String userId;
 
-    public PostExistingDishRequest(Integer dishId, String description, List<String> pictureUrls, Integer rate, List<String> flavor, Integer waitTime, Integer price, String userId) {
+    public PostExistingDishRequest(Integer dishId, String description, List<String> pictureUrls, Integer rate, String flavor, Integer waitTime, Integer price, String userId) {
         this.dishId = dishId;
         this.description = description;
         this.pictureUrls = pictureUrls;
@@ -47,14 +49,6 @@ public class PostExistingDishRequest {
         this.flavor = flavor;
         this.waitTime = waitTime;
         this.price = price;
-        this.userId = userId;
-    }
-
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
         this.userId = userId;
     }
 
@@ -90,11 +84,11 @@ public class PostExistingDishRequest {
         this.rate = rate;
     }
 
-    public List<String> getFlavor() {
+    public String getFlavor() {
         return flavor;
     }
 
-    public void setFlavor(List<String> flavor) {
+    public void setFlavor(String flavor) {
         this.flavor = flavor;
     }
 
@@ -114,4 +108,11 @@ public class PostExistingDishRequest {
         this.price = price;
     }
 
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
 }
