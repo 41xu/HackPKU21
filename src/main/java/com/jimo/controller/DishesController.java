@@ -1,7 +1,7 @@
 package com.jimo.controller;
 
 import com.jimo.model.common.Result;
-import com.jimo.model.dishes.DishesItem;
+import com.jimo.vo.dishes.DishesItem;
 import com.jimo.vo.*;
 import org.springframework.web.bind.annotation.*;
 

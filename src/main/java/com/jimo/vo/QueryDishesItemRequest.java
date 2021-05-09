@@ -113,4 +113,24 @@ public class QueryDishesItemRequest {
     public void setPage(Integer page) {
         this.page = page;
     }
+
+    public Integer getWaitTime() {
+        return waitTime;
+    }
+
+    public void setWaitTime(Integer waitTime) {
+        this.waitTime = waitTime;
+    }
+
+    public QueryDishesItemRequest(String name, String category, String canteen, Integer price, List<String> flavors, List<String> ingredients, Integer maxCalorie, Integer waitTime, Integer page) {
+        this.name = name;
+        this.category = category;
+        this.canteen = canteen;
+        this.price = price;
+        this.flavors = flavors;
+        this.ingredients = ingredients;
+        this.maxCalorie = maxCalorie;
+        this.waitTime = waitTime;
+        this.page = page;
+    }
 }

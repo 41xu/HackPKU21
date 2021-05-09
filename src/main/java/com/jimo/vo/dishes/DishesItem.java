@@ -1,10 +1,15 @@
-package com.jimo.model.dishes;
+package com.jimo.vo.dishes;
 
 /**
  * 商品列表 View Object
  * @author algorithm
  */
 public class DishesItem {
+    /**
+     * 菜品id
+     */
+    Integer dishId;
+
 
     /**
      * 商品名称

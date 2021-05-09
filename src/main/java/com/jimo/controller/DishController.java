@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.*;
 public class DishController {
 
     @PostMapping("/existing")
-    public Result postExistingDish(@RequestBody PostExistingDishRequest request){
+    public Result postExistingDishReview(@RequestBody PostExistingDishRequest request){
 
         return new Result(201, "",new PostExistingDishResponse());
     }
 
     @PostMapping("/new")
-    public Result postNewDish(@RequestBody PostNewDishRequest request){
+    public Result postNewDishReview(@RequestBody PostNewDishRequest request){
 
         return new Result(201, "", new PostNewDishResponse());
     }

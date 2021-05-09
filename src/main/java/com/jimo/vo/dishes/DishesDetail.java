@@ -1,4 +1,4 @@
-package com.jimo.model.dishes;
+package com.jimo.vo.dishes;
 
 /**
  * 商品详情 View Object
