@@ -35,6 +35,11 @@ public class DishesItem {
     Integer rate;
 
     /**
+     * 多少人评分
+     */
+    Integer rateNumber;
+
+    /**
      * 分钟
      */
     Integer waitTime;
@@ -43,6 +48,14 @@ public class DishesItem {
      * 图片链接 todo 展示的列表只有一张图，单四insert会有很多dishId-pictireId的记录；展示同一id的这张图随机选择？
      */
     String pictureUrl;
+
+    public Integer getRateNumber() {
+        return rateNumber;
+    }
+
+    public void setRateNumber(Integer rateNumber) {
+        this.rateNumber = rateNumber;
+    }
 
     public String getDishId() {
         return dishId;

@@ -13,6 +13,7 @@ import com.jimo.vo.entity.ReviewItem;
 import io.jsonwebtoken.lang.Collections;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -63,12 +64,14 @@ public class ReviewController {
         for (Review review : reviewList) {
             ReviewItem reviewItem = new ReviewItem();
             reviewItem.setId(review.getReviewId());
+            reviewItem.setUserId(review.getUserId());
 
-            System.out.println(review.getCreateDate());
             // todo 类型可能不对
+            System.out.println(review.getCreateDate());
             reviewItem.setTime(TimeUtils.getISO8601Timestamp(review.getCreateDate()));
             reviewItem.setRate(review.getRate());
             reviewItem.setDescription(review.getDescription());
+            // todo 可能会出错？俺也不知
             reviewItem.setFlavor(review.getFlavor());
             reviewItem.setWaitTime(review.getWaitTime());
             reviewItem.setPrice(review.getPrice());

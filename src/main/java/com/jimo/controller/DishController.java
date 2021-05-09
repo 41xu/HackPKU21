@@ -15,6 +15,7 @@ import com.jimo.model.common.Result;
 import com.jimo.vo.*;
 import io.jsonwebtoken.lang.Collections;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -40,7 +41,7 @@ public class DishController {
         dishExample.createCriteria().andDishIdEqualTo(request.getDishId());
         List<Dish> list = dishMapper.selectByExample(dishExample);
         if(Collections.isEmpty(list)){
-            return new Result(500, "错误的dishId");
+            return new Result(500, "dishId does not exists");
         }
         // 新增到Review 是一个新的review需要分配uuid
         Review review = new Review();
@@ -61,12 +62,14 @@ public class DishController {
 
         // todo 插入picture
         List<String> pictureUrlList = request.getPictureUrls();
-        for(String url: pictureUrlList){
-            DishPicture dishPicture = new DishPicture();
-            dishPicture.setDishId(request.getDishId());
-            dishPicture.setPictureUrl(url);
-            dishPicture.setReviewId(reviewUuid);
-            dishPictureMapper.insert(dishPicture);
+        if(!CollectionUtils.isEmpty(pictureUrlList)){
+            for(String url: pictureUrlList){
+                DishPicture dishPicture = new DishPicture();
+                dishPicture.setDishId(request.getDishId());
+                dishPicture.setPictureUrl(url);
+                dishPicture.setReviewId(reviewUuid);
+                dishPictureMapper.insert(dishPicture);
+            }
         }
         return new Result(201, "",new PostExistingDishResponse(request.getDishId()));
     }
