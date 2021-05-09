@@ -6,15 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="zebra-test" />
-        <module name="HackPKU21" />
+        <module name="auth-jimo" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="auth-jimo" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="HackPKU21" options="-parameters" />
-      <module name="zebra-test" options="-parameters" />
+      <module name="auth-jimo" options="-parameters" />
     </option>
   </component>
 </project>
