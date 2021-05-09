@@ -2,7 +2,9 @@ package com.jimo.mapper;
 
 import com.jimo.model.DishPicture;
 import com.jimo.model.DishPictureExample;
+
 import java.util.List;
+
 import org.apache.ibatis.session.RowBounds;
 
 public interface DishPictureMapper {

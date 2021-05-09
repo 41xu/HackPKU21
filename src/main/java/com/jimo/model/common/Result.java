@@ -2,6 +2,7 @@ package com.jimo.model.common;
 
 /**
  * 封装统一的返回数据
+ *
  * @author jimo
  * @date 2018/8/24 22:46
  */
@@ -29,10 +30,12 @@ public class Result {
         this.code = code;
         this.msg = msg;
     }
-    public Result(String login){
+
+    public Result(String login) {
 
     }
-    public Result(boolean bool){
+
+    public Result(boolean bool) {
 
     }
 

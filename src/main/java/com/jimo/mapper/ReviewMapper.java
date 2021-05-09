@@ -2,7 +2,9 @@ package com.jimo.mapper;
 
 import com.jimo.model.Review;
 import com.jimo.model.ReviewExample;
+
 import java.util.List;
+
 import org.apache.ibatis.session.RowBounds;
 
 public interface ReviewMapper {

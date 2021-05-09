@@ -78,8 +78,8 @@ public class ReviewController {
             reviewItem.setCategory(dishRes.get(0).getCategory());
             // todo 添加照片
             List<String> pictureUrlList = new ArrayList<>();
-            for(DishPicture dp:dpList){
-                if(dp.getReviewId().equals(review.getReviewId())){
+            for (DishPicture dp : dpList) {
+                if (dp.getReviewId().equals(review.getReviewId())) {
                     pictureUrlList.add(dp.getPictureUrl());
                 }
             }

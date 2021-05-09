@@ -40,7 +40,7 @@ public class DishesController {
         DishExample example = new DishExample();
         example.createCriteria().andDishIdEqualTo(dishId);
         List<Dish> dishList = dishMapper.selectByExample(example);
-        if(CollectionUtils.isEmpty(dishList)){
+        if (CollectionUtils.isEmpty(dishList)) {
             return new Result(500, "invalid dishId");
         }
         Dish dish = dishList.get(0);

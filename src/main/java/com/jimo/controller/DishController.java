@@ -1,7 +1,6 @@
 package com.jimo.controller;
 
 import java.sql.Timestamp;
-import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -89,7 +88,7 @@ public class DishController {
         dish.setCanteen(request.getCanteen());
 
         // dish.setIndegrent(); 商家专用字段
-        if(request.getCalorie()!=null){
+        if (request.getCalorie() != null) {
             dish.setCalories(request.getCalorie());
         } else {
             dish.setCalories(0);
