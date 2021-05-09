@@ -1,7 +1,7 @@
 package com.jimo.model;
 
 public enum FlavorEnum {
-    Spicy("Spicy", 0), Sour("Sour", 1);
+    Spicy("Spicy", 0), Sour("Sour", 1), Sweet("Sweet", 2), Bitter("Bitter", 3);
     String name;
     Integer code;
 

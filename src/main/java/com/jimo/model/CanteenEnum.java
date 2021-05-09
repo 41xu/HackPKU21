@@ -4,7 +4,9 @@ package com.jimo.model;
  * @author algorithm
  */
 public enum CanteenEnum {
-    XueYi("XueYi", 0), JiaYuan1("JiaYuan1", 1);
+    XueYi("XueYi", 0), JiaYuan1("JiaYuan1", 1), JiaYuan2("JiaYuan2", 2),
+    JiaYuan3("JiaYuan3", 3), JiaYuan4("JiaYuan4", 4), NongYuan1("NongYuan1", 5),
+    NongYuan2("NongYuan2", 6), NongYuan3("NongYuan3", 7);
 
     /**
      * 菜品名称

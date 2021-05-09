@@ -5,8 +5,8 @@ package com.jimo.model;
  */
 
 public enum CategoryLevelOneEnum {
-    BREAKPOINT("BreakPoint", 0), MEAL("Meal", 1), SNACK("Snack", 2);
-
+    BREAKPOINT("BreakPoint", 0), MEAL("Meal", 1), SNACK("Snack", 2),
+    Drinking("Drinking", 3), Dessert("Dessert", 4), Fruit("Fruit", 5);
     private String name;
     private Integer code;
 
