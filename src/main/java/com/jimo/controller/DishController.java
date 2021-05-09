@@ -1,4 +1,5 @@
 package com.jimo.controller;
+
 import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
@@ -35,12 +36,12 @@ public class DishController {
     private DishPictureMapper dishPictureMapper;
 
     @PostMapping("/existing")
-    public Result postExistingDishReview(@RequestBody PostExistingDishRequest request){
+    public Result postExistingDishReview(@RequestBody PostExistingDishRequest request) {
         //  校验是不是存在这个dish
         DishExample dishExample = new DishExample();
         dishExample.createCriteria().andDishIdEqualTo(request.getDishId());
         List<Dish> list = dishMapper.selectByExample(dishExample);
-        if(Collections.isEmpty(list)){
+        if (Collections.isEmpty(list)) {
             return new Result(500, "dishId does not exists");
         }
         // 新增到Review 是一个新的review需要分配uuid
@@ -62,8 +63,8 @@ public class DishController {
 
         // todo 插入picture
         List<String> pictureUrlList = request.getPictureUrls();
-        if(!CollectionUtils.isEmpty(pictureUrlList)){
-            for(String url: pictureUrlList){
+        if (!CollectionUtils.isEmpty(pictureUrlList)) {
+            for (String url : pictureUrlList) {
                 DishPicture dishPicture = new DishPicture();
                 dishPicture.setDishId(request.getDishId());
                 dishPicture.setPictureUrl(url);
@@ -71,11 +72,11 @@ public class DishController {
                 dishPictureMapper.insert(dishPicture);
             }
         }
-        return new Result(201, "",new PostExistingDishResponse(request.getDishId()));
+        return new Result(201, "", new PostExistingDishResponse(request.getDishId()));
     }
 
     @PostMapping("/new")
-    public Result postNewDishReview(@RequestBody PostNewDishRequest request){
+    public Result postNewDishReview(@RequestBody PostNewDishRequest request) {
 
         // 新增菜品
         String dishUuid = UUID.randomUUID().toString();
@@ -83,15 +84,20 @@ public class DishController {
         Dish dish = new Dish();
         dish.setDishId(dishUuid);
         dish.setDishName(request.getName());
-        dish.setSource(request.getUserId()!=null?1:0);
+        dish.setSource(request.getUserId() != null ? 1 : 0);
         dish.setCategory(request.getCategory());
         dish.setCanteen(request.getCanteen());
 
         // dish.setIndegrent(); 商家专用字段
-        // dish.setCalories(0); 商家专用字段
+        if(request.getCalorie()!=null){
+            dish.setCalories(request.getCalorie());
+        } else {
+            dish.setCalories(0);
+        }
         dish.setPrice(request.getPrice());
         dish.setFlavor(request.getFlavor());
-
+        int res = dishMapper.insert(dish);
+        System.out.println("insert dish res: " + res);
         // 新增到新增Review
         Review review = new Review();
         review.setDishId(dishUuid);// 刚才生成uuid
@@ -104,10 +110,12 @@ public class DishController {
         review.setPrice(request.getPrice());
         // todo 插入时间
         review.setCreateDate(new Timestamp(System.currentTimeMillis()));
+        res = reviewMapper.insert(review);
+        System.out.println("insert dish res: " + res);
 
         // todo 插入picture
         List<String> pictureUrlList = request.getPictureUrls();
-        for(String url: pictureUrlList){
+        for (String url : pictureUrlList) {
             DishPicture dishPicture = new DishPicture();
             dishPicture.setDishId(dishUuid);
             dishPicture.setPictureUrl(url);

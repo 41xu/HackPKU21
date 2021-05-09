@@ -9,7 +9,10 @@ public class DishesItem {
      * 菜品id
      */
     String dishId;
-
+    /**
+     * 口味
+     */
+    String flavor;
 
     /**
      * 商品名称
@@ -79,6 +82,14 @@ public class DishesItem {
 
     public void setPrice(Integer price) {
         this.price = price;
+    }
+
+    public String getFlavor() {
+        return flavor;
+    }
+
+    public void setFlavor(String flavor) {
+        this.flavor = flavor;
     }
 
     public String getCanteen() {

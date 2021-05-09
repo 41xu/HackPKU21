@@ -6,6 +6,8 @@ import com.jimo.mapper.DishPictureMapper;
 import com.jimo.mapper.ReviewMapper;
 import com.jimo.model.*;
 import com.jimo.model.common.Result;
+import com.jimo.model.enums.CanteenEnum;
+import com.jimo.utils.EnumUtils;
 import com.jimo.utils.MyConsts;
 import com.jimo.vo.entity.DishesItem;
 import com.jimo.vo.*;
@@ -34,60 +36,63 @@ public class DishesController {
     DishPictureMapper dishPictureMapper;
 
     @GetMapping("/getOne")
-    public Result getOne(@RequestParam(value = "dishId", required = true) String dishId){
+    public Result getOne(@RequestParam(value = "dishId", required = true) String dishId) {
         DishExample example = new DishExample();
         example.createCriteria().andDishIdEqualTo(dishId);
         List<Dish> dishList = dishMapper.selectByExample(example);
-        List<DishesItem> retList = new ArrayList<>();
-        for(Dish dish: dishList){
-
-            DishesItem dishesItem = new DishesItem();
-            dishesItem.setDishId(dish.getDishId());
-            dishesItem.setCanteen(dish.getCanteen());
-            dishesItem.setCalorie(dish.getCalories());
-            dishesItem.setName(dish.getDishName());
-            dishesItem.setPrice(dish.getPrice());
-            ReviewExample reviewExample = new ReviewExample();
-            reviewExample.createCriteria().andDishIdEqualTo(dish.getDishId());
-            List<Review> reviewList = reviewMapper.selectByExample(reviewExample);
-            double totWaitTime = 0;
-            double totRate = 0;
-            double cntWaitTime = 0;
-            double cntRate = 0;
-            for(Review review:reviewList){
-                if(review.getWaitTime() != null){
-                    totWaitTime += review.getWaitTime();
-                    cntWaitTime +=1.0;
-                }
-                if(review.getRate() != null){
-                    totRate += review.getRate();
-                    cntRate +=1.0;
-                }
-            }
-            // todo 处理没有评论的情况 review db
-            if(cntWaitTime > 0){
-                dishesItem.setWaitTime((int)Math.floor(totWaitTime/cntWaitTime));
-            } else {
-                dishesItem.setWaitTime(0);
-            }
-            if(cntRate > 0){
-                // todo cal review avg rate
-                dishesItem.setRate((int)Math.floor(totRate/cntRate));
-            } else {
-                dishesItem.setRate(0);
-            }
-            dishesItem.setRateNumber((int)Math.floor(cntRate));
-            DishPictureExample dishPictureExample = new DishPictureExample();
-            dishPictureExample.createCriteria().andDishIdEqualTo(dish.getDishId());
-            List<DishPicture> dp = dishPictureMapper.selectByExample(dishPictureExample);
-            if(!CollectionUtils.isEmpty(dp)){
-                dishesItem.setPictureUrl(dp.get(0).getPictureUrl());
-            } else {
-                dishesItem.setPictureUrl("https://sm.ms/image/2HPvyLBA4RjMCzQ");
-            }
-            retList.add(dishesItem);
+        if(CollectionUtils.isEmpty(dishList)){
+            return new Result(500, "invalid dishId");
         }
-        return new Result(200, "", retList);
+        Dish dish = dishList.get(0);
+
+        DishesItem dishesItem = new DishesItem();
+        dishesItem.setDishId(dish.getDishId());
+        dishesItem.setCanteen(dish.getCanteen());
+        dishesItem.setCalorie(dish.getCalories());
+        dishesItem.setName(dish.getDishName());
+        dishesItem.setPrice(dish.getPrice());
+        dishesItem.setFlavor(dish.getFlavor());
+        ReviewExample reviewExample = new ReviewExample();
+        reviewExample.createCriteria().andDishIdEqualTo(dish.getDishId());
+        List<Review> reviewList = reviewMapper.selectByExample(reviewExample);
+        double totWaitTime = 0;
+        double totRate = 0;
+        double cntWaitTime = 0;
+        double cntRate = 0;
+        for (Review review : reviewList) {
+            if (review.getWaitTime() != null) {
+                totWaitTime += review.getWaitTime();
+                cntWaitTime += 1.0;
+            }
+            if (review.getRate() != null) {
+                totRate += review.getRate();
+                cntRate += 1.0;
+            }
+        }
+        // todo 处理没有评论的情况 review db
+        if (cntWaitTime > 0) {
+            dishesItem.setWaitTime((int) Math.floor(totWaitTime / cntWaitTime));
+        } else {
+            dishesItem.setWaitTime(0);
+        }
+        if (cntRate > 0) {
+            // todo cal review avg rate
+            dishesItem.setRate((int) Math.floor(totRate / cntRate));
+        } else {
+            dishesItem.setRate(0);
+        }
+        dishesItem.setRateNumber((int) Math.floor(cntRate));
+        DishPictureExample dishPictureExample = new DishPictureExample();
+        dishPictureExample.createCriteria().andDishIdEqualTo(dish.getDishId());
+        List<DishPicture> dp = dishPictureMapper.selectByExample(dishPictureExample);
+        if (!CollectionUtils.isEmpty(dp)) {
+            dishesItem.setPictureUrl(dp.get(0).getPictureUrl());
+        } else {
+            dishesItem.setPictureUrl("https://sm.ms/image/2HPvyLBA4RjMCzQ");
+        }
+
+
+        return new Result(200, "", dishesItem);
     }
 
     @GetMapping("/getList")
@@ -121,7 +126,7 @@ public class DishesController {
         if (!CollectionUtils.isEmpty(ingredients)) {
             criteria.andIndegrentIn(ingredients);
         }
-        if (!Strings.isNullOrEmpty(canteen)) {
+        if (!Strings.isNullOrEmpty(canteen) && EnumUtils.isValidEnum(CanteenEnum.class, canteen)) {
             criteria.andCanteenEqualTo(canteen);
         }
         // todo 以下是返回值todo
@@ -132,7 +137,7 @@ public class DishesController {
         RowBounds rowBounds = new RowBounds(offset, MyConsts.DEFAULT_PAGE_SIZE);
         List<Dish> dishList = dishMapper.selectByExampleWithRowbounds(example, rowBounds);
         List<DishesItem> retList = new ArrayList<>();
-        for(Dish dish: dishList){
+        for (Dish dish : dishList) {
 
             DishesItem dishesItem = new DishesItem();
             dishesItem.setDishId(dish.getDishId());
@@ -140,6 +145,7 @@ public class DishesController {
             dishesItem.setCalorie(dish.getCalories());
             dishesItem.setName(dish.getDishName());
             dishesItem.setPrice(dish.getPrice());
+            dishesItem.setFlavor(dish.getFlavor());
             ReviewExample reviewExample = new ReviewExample();
             reviewExample.createCriteria().andDishIdEqualTo(dish.getDishId());
             List<Review> reviewList = reviewMapper.selectByExample(reviewExample);
@@ -147,33 +153,33 @@ public class DishesController {
             double totRate = 0;
             double cntWaitTime = 0;
             double cntRate = 0;
-            for(Review review:reviewList){
-                if(review.getWaitTime() != null){
+            for (Review review : reviewList) {
+                if (review.getWaitTime() != null) {
                     totWaitTime += review.getWaitTime();
-                    cntWaitTime +=1.0;
+                    cntWaitTime += 1.0;
                 }
-                if(review.getRate() != null){
+                if (review.getRate() != null) {
                     totRate += review.getRate();
-                    cntRate +=1.0;
+                    cntRate += 1.0;
                 }
             }
             // todo 处理没有评论的情况 review db
-            if(cntWaitTime > 0){
-                dishesItem.setWaitTime((int)Math.floor(totWaitTime/cntWaitTime));
+            if (cntWaitTime > 0) {
+                dishesItem.setWaitTime((int) Math.floor(totWaitTime / cntWaitTime));
             } else {
                 dishesItem.setWaitTime(0);
             }
-            if(cntRate > 0){
+            if (cntRate > 0) {
                 // todo cal review avg rate
-                dishesItem.setRate((int)Math.floor(totRate/cntRate));
+                dishesItem.setRate((int) Math.floor(totRate / cntRate));
             } else {
                 dishesItem.setRate(0);
             }
-            dishesItem.setRateNumber((int)Math.floor(cntRate));
+            dishesItem.setRateNumber((int) Math.floor(cntRate));
             DishPictureExample dishPictureExample = new DishPictureExample();
             dishPictureExample.createCriteria().andDishIdEqualTo(dish.getDishId());
             List<DishPicture> dp = dishPictureMapper.selectByExample(dishPictureExample);
-            if(!CollectionUtils.isEmpty(dp)){
+            if (!CollectionUtils.isEmpty(dp)) {
                 dishesItem.setPictureUrl(dp.get(0).getPictureUrl());
             } else {
                 dishesItem.setPictureUrl("https://sm.ms/image/2HPvyLBA4RjMCzQ");

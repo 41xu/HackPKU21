@@ -56,17 +56,17 @@ public class PostNewDishRequest {
      */
     String userId;
 
-    public PostNewDishRequest(String description, List<String> pictureUrls, Integer rate, String flavor, Integer waitTime, Integer price, String name, String category, String canteen, String userId) {
-        this.description = description;
-        this.pictureUrls = pictureUrls;
-        this.rate = rate;
-        this.flavor = flavor;
-        this.waitTime = waitTime;
-        this.price = price;
-        this.name = name;
-        this.category = category;
-        this.canteen = canteen;
-        this.userId = userId;
+    /**
+     * kcal per 100 g
+     */
+    Integer calorie;
+
+    public Integer getCalorie() {
+        return calorie;
+    }
+
+    public void setCalorie(Integer calorie) {
+        this.calorie = calorie;
     }
 
     public String getDescription() {
