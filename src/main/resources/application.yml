@@ -4,6 +4,6 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.0.253/canteen?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT&useSSL=false
+    url: jdbc:mysql://192.168.0.250/canteen?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT&useSSL=false
     username: master
     password: H@ckath0n
