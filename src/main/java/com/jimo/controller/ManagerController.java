@@ -140,10 +140,21 @@ public class ManagerController {
     }
 
 
+    /**
+     * todo appId和appSecret 通过salt 加密成为encodedStr
+     * todo 传进来 salt和encodedStr 我们这边解密得到appId和appSecret
+     *
+     * @param appId
+     * @param appSecret
+     * @param clusterId
+     * @param zone
+     * @return
+     * @throws Exception
+     */
     @GetMapping("/stop/cl/v2")
     public Result stopClV2(@RequestParam(value = "appId", required = true) String appId,
                           @RequestParam(value = "appSecret", required = true) String appSecret,
-                          @RequestParam(value = "clusterIds", required = true) List<String> clusterIds,
+                          @RequestParam(value = "clusterId", required = true) String clusterId,
                           @RequestParam(value = "zone", required = true) String zone) throws Exception {
         ACCESS_KEY_ID = appId;
         SECRET_ACCESS_KEY = appSecret;
@@ -151,11 +162,7 @@ public class ManagerController {
         var requestArgs = new HashMap<String, String>();
 
         requestArgs.put("action", "StopClusters");
-        int i = 1;
-        for(String cl:clusterIds){
-            requestArgs.put("clusters."+i, cl);
-            i ++;
-        }
+        requestArgs.put("clusters.1", clusterId);
         requestArgs.put("zone", zone);
 
         var now = Instant.now();

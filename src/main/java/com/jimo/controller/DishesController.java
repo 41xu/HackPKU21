@@ -88,7 +88,7 @@ public class DishesController {
         if (!CollectionUtils.isEmpty(dp)) {
             dishesItem.setPictureUrl(dp.get(0).getPictureUrl());
         } else {
-            dishesItem.setPictureUrl("https://sm.ms/image/2HPvyLBA4RjMCzQ");
+            dishesItem.setPictureUrl("https://z3.ax1x.com/2021/05/10/gYxy8I.jpg");
         }
 
 
@@ -182,7 +182,7 @@ public class DishesController {
             if (!CollectionUtils.isEmpty(dp)) {
                 dishesItem.setPictureUrl(dp.get(0).getPictureUrl());
             } else {
-                dishesItem.setPictureUrl("https://sm.ms/image/2HPvyLBA4RjMCzQ");
+                dishesItem.setPictureUrl("https://z3.ax1x.com/2021/05/10/gYxy8I.jpg");
             }
             retList.add(dishesItem);
         }
@@ -190,32 +190,5 @@ public class DishesController {
 
     }
 
-    @GetMapping("/getList/mock")
-    public Result getDishesListMock(@RequestParam(value = "name", required = false) String name,
-                                    @RequestParam(value = "category", required = false) String category,
-                                    @RequestParam(value = "minPrice", required = false) Integer minPrice,
-                                    @RequestParam(value = "maxPrice", required = false) Integer maxPrice,
-                                    @RequestParam(value = "flavors", required = false) List<String> flavors,
-                                    @RequestParam(value = "ingredients", required = false) List<String> ingredients,
-                                    @RequestParam(value = "maxCalorie", required = false) Integer maxCalorie,
-                                    @RequestParam(value = "minCalorie", required = false) Integer minCalorie,
-                                    @RequestParam(value = "page", required = false) Integer page,
-                                    @RequestParam(value = "canteen", required = false) String canteen) {
-
-        List<DishesItem> returnList = new ArrayList<>();
-        DishesItem item1 = new DishesItem();
-        item1.setDishId("0");
-        item1.setName("");
-        item1.setPrice(0);
-        item1.setCanteen("JiaYuan1");
-        item1.setCalorie(0);
-        item1.setRate(0);
-        item1.setWaitTime(0);
-        item1.setPictureUrl("https://sm.ms/image/2HPvyLBA4RjMCzQ");
-        returnList.add(item1);
-        QueryDishesItemResponse response = new QueryDishesItemResponse();
-        response.setDishesItemList(returnList);
-        return new Result(200, "", response);
-    }
 
 }

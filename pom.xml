@@ -3,13 +3,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.jimo</groupId>
-    <artifactId>auth-jimo</artifactId>
-    <version>2.0.0</version>
+    <groupId>com.canteen</groupId>
+    <artifactId>canteen-wiki</artifactId>
+    <version>2.0.1</version>
     <packaging>jar</packaging>
 
-    <name>AuthServer</name>
-    <description>auth server</description>
+    <name>CanteenWiki</name>
+    <description>canteen wiki</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
